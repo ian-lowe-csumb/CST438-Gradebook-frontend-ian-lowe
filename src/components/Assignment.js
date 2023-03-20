@@ -60,6 +60,9 @@ class Assignment extends React.Component {
     .then((response) => { 
       if (response.status == 200) {
         this.fetchAssignments();
+        toast.success("Assignment added!", {
+          position: toast.POSITION.BOTTOM_LEFT
+        });
       } else {
         toast.error("Add failed.", {
           position: toast.POSITION.BOTTOM_LEFT
